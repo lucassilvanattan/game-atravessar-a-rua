@@ -9,13 +9,14 @@ function setup() {
 function draw() {
   background(imagemDaEstrada);
   mostraAtor();
-  mostraCarro();
-  movimentaCarro();
+  mostraPokemon();
+  movimentaPokemon();
   movimentaAtor();
-  voltaPosicaoInicialDoCarro();
+  voltaPosicaoInicialDoPokemon();
   verificaColisao();
   incluiPontos();
   marcaPonto()
+  console.log(verificaColisao)
 }
 
 

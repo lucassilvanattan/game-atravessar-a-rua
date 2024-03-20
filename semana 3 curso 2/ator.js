@@ -1,12 +1,12 @@
 //ator
 let xAtor = 80;
-let yAtor = 366;
+let yAtor = 345;
 let colisao = false;
 let pontos = 0;
 
 
 function mostraAtor(){
-  image(imagemDoAtor, xAtor, yAtor, 40, 40);
+  image(imagemDoAtor, xAtor, yAtor, 100, 60);
 }
 
 function movimentaAtor(){
@@ -15,10 +15,10 @@ function movimentaAtor(){
   }
   if (keyIsDown(DOWN_ARROW)){
       if(seAtorPodeSeMover()){
-      yAtor += 3;
+        yAtor += 3;
       }}
-      if (keyIsDown(RIGHT_ARROW) && xAtor < 461){
-      xAtor += 3
+      if (keyIsDown(RIGHT_ARROW) && xAtor < 430){
+        xAtor += 3
       }
       if (keyIsDown(LEFT_ARROW) && xAtor > 0) {
         xAtor -= 3
@@ -27,8 +27,8 @@ function movimentaAtor(){
 
 
 function verificaColisao() {
-  for(let i = 0; i < imagensCarros.length; i++){
-    colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor + 4, 15)
+  for(let i = 0; i < imagensPokemons.length; i++){
+    colisao = collideRectRect(xPokemons[i], yPokemons[i], comprimentoPokemon - 60, 40, xAtor, yAtor + 10, 22, 28)
     if (colisao) {
       voltaAtorParaPosicaoInicial()
       somDaColisao.play()
@@ -40,7 +40,7 @@ function verificaColisao() {
 }
 
 function voltaAtorParaPosicaoInicial() {
-  yAtor = 366
+  yAtor = 345
 }
 
 function incluiPontos() {
@@ -51,7 +51,7 @@ function incluiPontos() {
 }
 
 function marcaPonto(){
-    if(yAtor < 12){
+    if(yAtor < 8){
         pontos++;
         somDoPonto.play()
         voltaAtorParaPosicaoInicial();
@@ -63,5 +63,5 @@ function pontosMaiorQueZero() {
 }
 
 function seAtorPodeSeMover() {
-    return yAtor < 366
+    return yAtor < 345
 }

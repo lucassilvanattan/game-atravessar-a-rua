@@ -1,8 +1,8 @@
 let imagemDaEstrada;
 let imagemDoAtor;
-let imagemCarro;
-let imagemCarro2;
-let imagemCarro3;
+let pokemon;
+let pokemon2;
+let pokemon3;
 
 // sons
 
@@ -18,8 +18,8 @@ function preload(){
 
   imagemDaEstrada = loadImage("./imagens/estrada.png");
   imagemDoAtor = loadImage("imagens/gengar.png");
-  imagemCarro = loadImage("imagens/carro-1.png");
-  imagemCarro2 = loadImage("imagens/carro-2.png");
-  imagemCarro3 = loadImage("imagens/carro-3.png"); 
-  imagensCarros = [imagemCarro, imagemCarro2, imagemCarro3, imagemCarro, imagemCarro2, imagemCarro3]
+  pokemon = loadImage("imagens/pokemon-1.png");
+  pokemon2 = loadImage("imagens/pokemon-2.png");
+  pokemon3 = loadImage("imagens/pokemon-3.png"); 
+  imagensPokemons = [pokemon, pokemon2, pokemon3, pokemon, pokemon2, pokemon3]
 }
