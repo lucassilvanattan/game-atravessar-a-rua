@@ -12,7 +12,7 @@ let somDaColisao;
 
 
 function preload(){
-  somDaTrilha = loadSound("sons/trilha.mp3")
+  somDaTrilha = loadSound("sons/pokemon-trilha.mp3")
   somDoPonto = loadSound("sons/pontos.wav")
   somDaColisao = loadSound("sons/colidiu.mp3")
 
